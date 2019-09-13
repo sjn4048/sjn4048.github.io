@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="A personal blog just to please myself.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ricochet&#39;s Blog">
+<meta property="og:url" content="http://ricochet.cn/blog/index.html">
+<meta property="og:site_name" content="Ricochet&#39;s Blog">
+<meta property="og:description" content="A personal blog just to please myself.">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ricochet&#39;s Blog">
+<meta name="twitter:description" content="A personal blog just to please myself.">
+  <link rel="canonical" href="http://ricochet.cn/blog/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Ricochet's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ricochet's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <div id="posts" class="posts-expand">
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://ricochet.cn/blog/blog/2019/09/13/今晚，NGA又过节了/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ricochet">
+      <meta itemprop="description" content="A personal blog just to please myself.">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricochet's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/2019/09/13/今晚，NGA又过节了/" class="post-title-link" itemprop="url">今晚，NGA又过节了...</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-09-13 15:26:20 / Modified: 15:27:31" itemprop="dateCreated datePublished" datetime="2019-09-13T15:26:20-05:00">2019-09-13</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>前情提要：<a href="https://www.zhihu.com/question/345890053/answer/822928246" target="_blank" rel="noopener">https://www.zhihu.com/question/345890053/answer/822928246</a></p>
+<p>NGA在整活这方面真是从来不会让人失望，借这事说说我对NGA整体的看法。</p>
+<p>过去的批判者往往将NGA的制度类比于古代的县衙-草民制：草民都很希望有个版务组作为青天大老爷青天大老爷为村子分忧解难、为自己主持公道；而一旦大老爷骑在民众头上作威作福，那草民也无力反抗。同时银色黎明虽然有时不怎么靠谱，在它的存在在大多数时候可以约束整个体系不要走的太偏。</p>
+<p>这种扁平化的认知下，NGA被称为私人论坛，这个称呼实际上包含了正负两重不同情感基调的解读：一方面，固然是私人论坛所带来的不平等；但另一方面，也包含对“找到一个版务组nice的子版并且常驻的祈愿”，因为这里的<em>私人</em>指的是很多个（组）不同的私人，而不是某一个。</p>
+<p>事实上，nice的版务组当然是存在的，而且在这些组中由于版务的明确版规+高强度管理，可以带来很不错的用户体验。<strong>用户和版务构成了一组双向选择</strong>，守序善良的去守序善良的版，绝对中立的去绝对中立的版，就算你是混乱邪恶的支持者，你也可以自己主动寻找三观类似的奇葩版面常驻。类似的，有人为了干货满满宁愿死气沉沉；有人则在水漫金山中自得其乐。</p>
+<p>一旦抱持着这样的心态，NGA什么驱逐3000酱/fgo版主勾结运营之类的黑历史其实都可以一笑而过。毕竟，就算3000酱被挂城楼了，TA也只是从某一个子版中被驱逐了，他仍然可以去别的版面带来欢乐（与节奏）。</p>
+<p>我认为这也是NGA、乃至任何<strong>人治</strong>的论坛（如早些年的百度贴吧）的核心竞争力之一——<strong>通过多样性的版面风格吸引不同种类的用户</strong>。一个私人论坛的核心竞争力居然是多样性，这听起来很可笑，但你如果理解了刚才的论述，你就会明白这是很理所当然的。这也是我虽然对NGA的某些版面很看不上，但还是NGA重度用户、甚至愿意主动给NGA用爱发电的主要原因。</p>
+<p>但是经此一役，大家会发现之前的认知是错误的。相较于扁平化的版主-用户结构，NGA的体制更类似于标准的multi-level bureaucracy hierarchy，所谓的版务组/版主也不过是其中地位不太高的一环。事实上这也是一直写在NGA版规里的模式中的——Warden/Scythe/Titan三种权限依次升高的管理级别。只是，过去大家一般很默契，低级管理员管版面，中级管理员管银色黎明，高级管理员开发网站、当吉祥物，才营造了一种扁平的假象。</p>
+<p>但现在唯一（？）的Titan用户Zeg亲自下场，这带来的问题就有点要命了。如果管理内部的不同层级之间出现了价值观矛盾（比如舟游的管理是绝对中立而zeg是守序邪恶；舟游的管理觉得节奏贴没啥大不了但zeg看着就心烦），那今天这种不同级别版务打起来的新约圣经都是小事情，更致命的是，如果这个口子开了的话，NGA最开放性的多元将不复存在，那到时候怕是真的要成为凉凉论坛了。</p>
+<p>但是话又说回来，至少对于我这种输出大于输入的用户来说，现在的互联网生态已经足够多元，贴吧凉了还有NGA、NGA凉了还有虎扑、这些全都凉了我自己搭个blog自娱自乐总也可以吧。如果把写东西本身当做一种快乐的话，所在的环境永远不会成为掣肘。</p>
+<p>P.S. 我觉得zeg要是真开个反明日方舟版我还挺佩服他的。当然，我更希望他直接开一个“不许黑明日方舟版”，让和谐的春风普照在版面的每一寸土地呗。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://ricochet.cn/blog/blog/2019/08/23/从围棋到MOBA，从AI到未来：为什么绝悟AI是王者荣耀的闪耀明天/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ricochet">
+      <meta itemprop="description" content="A personal blog just to please myself.">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricochet's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/2019/08/23/从围棋到MOBA，从AI到未来：为什么绝悟AI是王者荣耀的闪耀明天/" class="post-title-link" itemprop="url">从围棋到MOBA，从AI到未来：为什么绝悟AI是王者荣耀的闪耀明天</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-08-23 00:21:00" itemprop="dateCreated datePublished" datetime="2019-08-23T00:21:00-05:00">2019-08-23</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-09-03 17:51:24" itemprop="dateModified" datetime="2019-09-03T17:51:24-05:00">2019-09-03</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果不了解天美工作室在王者荣耀<strong><u>高星五排</u></strong>局中加入AI的事件，请移步<a href="https://ngabbs.com/read.php?tid=18260287&_ff=516" target="_blank" rel="noopener">暴走的老刘备的帖子</a></p>
+<p>这是一篇很长的文章（2500字），但大多数都是有趣的故事，枯燥的说理占比很小。希望你能看得开心。</p>
+<h2 id="利益相关"><a href="#利益相关" class="headerlink" title="利益相关"></a>利益相关</h2><ul>
+<li>休闲路人玩家，最高水平巅峰赛1700</li>
+<li>AI领域见习研究者，主攻方向NLP/RL</li>
+<li>围棋业余4段棋手，某211大学校围棋队划水成员</li>
+</ul>
+<h2 id="个人态度"><a href="#个人态度" class="headerlink" title="个人态度"></a>个人态度</h2><ol>
+<li>从游戏的角度：</li>
+</ol>
+<ul>
+<li>我<u><strong>支持</strong></u>在在让玩家<u><strong>知情</strong></u>的情况下在<strong><u>高段位五排</u></strong>中加入AI（即玩家在载入对局时就知道对面是AI）</li>
+<li>我<strong><u>建议</u></strong>开放<strong><u>满战力</u></strong>的AI给<strong><u>高段位五排队伍</u></strong>挑战</li>
+</ul>
+<ol start="2">
+<li>从AI模型的角度</li>
+</ol>
+<ul>
+<li>我<strong><u>建议</u></strong>人为给AI<strong><u>增加延迟</u></strong>、<strong><u>降低操作间隔</u></strong></li>
+</ul>
+<h2 id="目前的AI到底是什么"><a href="#目前的AI到底是什么" class="headerlink" title="目前的AI到底是什么"></a>目前的AI到底是什么</h2><p>如果没有猜错的话，目前天美投放的AI就是腾讯最新研究的<strong>绝悟</strong>AI。关于该AI的报道可参见<a href="https://tech.qq.com/a/20190803/002062.htm" target="_blank" rel="noopener">这里</a>。</p>
+<ol>
+<li>作为AI从业者，我认为该AI的亮点在于</li>
+</ol>
+<ul>
+<li>使用了白板学习，即<strong>不依赖于任何人类已知经验</strong>（如观看人类录像、人为设定连招等），完全做到<strong>从零学起</strong>。</li>
+<li>有较高的把握认为，<strong>该AI没有全图视野</strong>。（腾讯并没有明确表态是否有全局视野，但在推文中使用了“不完全信息博弈”的说法，如果文案没有错误，则就是没有全局视野的意思）</li>
+</ul>
+<ol start="2">
+<li>该AI的问题在于</li>
+</ol>
+<ul>
+<li>拥有超过人类极限的操作精度和网络延迟，这从AI的抽搐移动可以看出。（这也是几乎所有MOBA类AI的通病）</li>
+</ul>
+<p>我们一方面要肯定该AI使用白板学习且去掉全图视野后的优异水平，另一方面也要认识到，输了也不完全怪咱们自己。</p>
+<p>从公平的角度，我是<strong>希望给AI加上20ms的网络延迟</strong>（这个很容易模拟），<strong>同时加上操作之间的cd</strong>，控制一下apm，避免真-无懈可击的连招打的人没脾气。</p>
+<h2 id="那为什么还要支持加入AI呢？"><a href="#那为什么还要支持加入AI呢？" class="headerlink" title="那为什么还要支持加入AI呢？"></a>那为什么还要支持加入AI呢？</h2><p>原因很简单，因为我是一名下围棋超过15年的围棋爱好者，充分见证了AI对围棋行业天翻地覆的改变，AI可以说将所有围棋运动员的水平提升了远远不止一个档次。而<strong>我认为这种脱胎换骨的提升同样适用于MOBA</strong>。</p>
+<p>先给大家讲一个围棋的故事，希望大家能耐心看完。</p>
+<p>在我小学学棋时，“开局星位点三三”和“星位小飞挂角尖顶”这两种招式都属于<strong>围棋界一致认为血亏</strong>的下法，属于下出来就要被老师打手板的那种。</p>
+<p>但是，AlphaGo横空出世后，大家惊讶的发现居然AlphaGo的自对局棋谱里每局都这么下！</p>
+<p>职业棋手都懵逼了，<strong>我们下了一百年的围棋怎么就被AI否定了？</strong>但是呢，硬打又打不过，就纷纷买了高性能主机，和AI一起拆解研究。</p>
+<p>大概花了半年的时间才搞懂，<strong>原来一百年来，人类都看漏了一步</strong>，之前人类认为血亏的下法的确是血亏，但是只要多走一步棋，从“爬两下”变成“爬三下”，一下就从血亏变成了稍赚。<strong>而就这一步之隔，一百年间顶尖智慧的围棋选手竟无人发现。就算隐隐约约有些感觉，他也不敢这么下，因为怕被围棋界耻笑</strong>。</p>
+<p><strong>这样的例子有上百个之多</strong>。<strong>而且，不喂人类棋谱、完全白板训练出的AlphaGo Zero更是完全脱离了人类局限认知的束缚，提供了更多超乎想象但极为合理的新思想</strong>。现在，如果哪个职业选手不买个电脑和AI一起研究，就会瞬间跌出围棋顶尖高手的行列。人类对围棋的理念被AI重新塑造，实力更是提升了几个大台阶。虽然人类还是打不过最顶尖的AI，但已经超越了虐杀李世石的初代AlphaGo，也经常能发现绝艺等顶尖AI都看不到的妙手。<del>（然并卵，还是打不过</del></p>
+<p>我花了这么长的篇幅讲围棋并不是废话，其实里边已经暗含了<strong>我认为绝悟AI能给MOBA带来的三大利好</strong>。</p>
+<ol>
+<li><strong><u>想前人未曾想，提供游戏思路</u></strong>。众所周知MOBA的游戏套路很多、且版本变化很快。从这种角度来说，MOBA的套路比一百年不改规则的围棋更难发现。而在绝悟的对局中，就真的出现过<strong>双C中路吃第一波线然后转边路</strong>的操作，如果这样是最后证明是正确的，那么AI的出现无疑能极大地<strong>拓展游戏的思路</strong></li>
+<li><strong><u>做前人未敢做，重新审视一切</u></strong>。在”前AI时代“，不是没有国手下过开局点三三，但他们一方面怕别人指指点点，一方面又不敢肯定自己这么下对不对，只好偃旗息鼓，按照大家的共识来下。<strong>而对应MOBA，”C位不能被蹭线“，”裸三级辅助装一定都是SB“，”没有单带边路就容易被运营死“等等，这些约定俗成的规律又何尝不可以被挑战呢？</strong>当然你可能会说，“裸三级辅助装一定是有问题的，不接受反驳”。的确，有可能在现在的情况下就是血亏，但是，<strong>又怎么保证我们没有漏掉之后“再爬一步”的妙手呢？</strong></li>
+<li><strong><u>提升认知边际，全民提升水平</u></strong>。归根结底，AI最终极的目的就是让我们更强。菜鸡互啄是五五开，神仙打架也是五五开，<strong>谁不想看后者呢？</strong>能够从AI取经、提升游戏水平，这也是我自己作为一个自认的硬核游戏玩家最快乐的事情。</li>
+</ol>
+<p>这部分的最后解答一个疑虑，<strong>会不会在AI出现后，发现游戏只有一种最佳玩法，导致游戏性反而下降了呢？</strong>比如如果AI最后收敛到了所有人一起带线避战，一局打50分钟，这不是反而更差了吗？</p>
+<p><strong>这种疑虑是有道理的，但我们可以暂时不必担心</strong>。</p>
+<p>首先，按照围棋的经验，在没有AI时代，国手们有很多种棋风，比如实空流、宇宙流、均衡流等。但AI出现后，大家发现最好的行棋风格就是没有风格。</p>
+<p>同理，我们也许可以推测，对于MOBA来说，<strong>最好的策略就是没有策略。</strong>这里的没有策略当然指的不是乱打一气，而是<strong>掌握各种风格，不偏激不上头，在合适的时候用合适的打法</strong>。当然，人类可能要花很长时间才能学会。</p>
+<p>其次，AI其实可以帮我们<strong>更好地发现游戏平衡性的问题</strong>，这也能够帮助策划<strong>更好的调整版本强度</strong>。<del>策划还是很努力地，给他们点信心吧</del></p>
+<h2 id="如果TIMI看到了这篇文章"><a href="#如果TIMI看到了这篇文章" class="headerlink" title="如果TIMI看到了这篇文章"></a>如果TIMI看到了这篇文章</h2><p>我希望TIMI顶住舆论的压力，继续测试。不要因为流言蜚语而畏首不前、自我放弃。</p>
+<p>同时，<strong>我希望能够让玩家知道自己正在面对AI</strong>。AI不丢人，可以大大方方告诉大家。这样一方面是保证了玩家的知情权，另一方面也可以让玩家有意识的观察AI的行动策略，看看是否能有学习的空间。</p>
+<p>最后，我也希望能够向KPL职业战队和高端路人玩家（比如巅峰赛前1000名）<strong>开放组队形式的AI挑战</strong>。如果优秀的AI战术能够从KPL推广出来，那么就可以自顶之下的普及给每一个热爱游戏的玩家。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>今天看到一个帖子，大概意思是自己虽然很菜，但是决不允许天美拿高端顶尖玩家进行测试，说这是一种侮辱。虽然我自己不能算是顶尖玩家，不过我看了之后还是有点哑然失笑。所以在文章的最后，就给大家讲个故事吧。</p>
+<p>在2017年末，一个名为”符合预期“的神秘账号，在腾讯围棋平台上大杀四方。面对最顶尖的人类棋手，它轻松连赢10盘。<strong>这时，大家就已经心知肚明这是哪个大科技公司的AI马甲了，想继续挑战也就是送死。</strong></p>
+<p>但是，围棋世界冠军们没有顾虑自己尊严受损而退缩，反而一个接一个的排队挑战。最后，“符合预期”对人类顶尖高手取得了60连胜。其中绝大多数是“很没有尊严”的屠杀局。</p>
+<p>之后，“符合预期”揭下了面纱，将ID改为了自己真正的名字，腾讯自研围棋AI、“绝悟”的哥哥——<strong>“绝艺“</strong>。</p>
+<p>希望这个故事让大家知道：<strong>输给AI不丢人，在游戏的路上， 你的对手只有你自己</strong>。</p>
+<h3 id="Q-amp-As"><a href="#Q-amp-As" class="headerlink" title="Q&amp;As"></a>Q&amp;As</h3><p>Q:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">openai five后来不做了，这是一个Dota2的ai，团队ai，一是每次更新版本，都要再训练一遍，也就是迁移学习做不好，很费精力和财力，公开人类挑战百分之99胜率，已经可以继续圈钱了，二是整体复杂度还是太高，直到最后也没全部开放所有限制，而且打法很单一，后来有人类选手发现可以比较好方式的赢下了。</span><br><span class="line">rng去年放出绝悟和对应论文，上面写了用的openai的框架，做了些修改，至于今年改没改，不太清楚，今年论文没找到翻译。</span><br><span class="line">其实这个moba的模型并没有达到完美，也很难，但是操作上人类确实很难超过ai，无论怎么限制，ai的操作就是比人强，再很大程度上人确实没办法抗衡。</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">优秀回复，说的特别好</span><br><span class="line"></span><br><span class="line">我补充几个点：</span><br><span class="line">1. 今年更新了，我也很期待最新的论文公布</span><br><span class="line">2. 每个大赛季版本重新训练对于腾讯来说是完全可以支付的，但是迁移学习的确是一个难点，你说的非常对</span><br><span class="line">3. MOBA离完美还有很远很远，但是我相信千里之行始于足下嘛。我高中时候还在嘲笑当时的围棋ai一坨xx，结果没过两年就被教育的说不出话了</span><br><span class="line">4. 操作我强烈建议拉平，不然ai得不到足够的挑战，可能会沉溺于局部最优</span><br></pre></td></tr></table></figure>
+
+<p>Q:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">希望是五个ai操作五个角色，互相之间共享有限的情报，而不是一个ai协调五个角色</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这是一个AI哲学问题。如果5个模型都是同一个参数，即使他们不沟通，他们该算是1个模型还是5个模型？其实很难讲，因为权重都一样，运行在1台机器和5台机器能一样吗？</span><br><span class="line"></span><br><span class="line">不过你说的有一点很有启发性：如果给AI人为的mask(删除)一些信息(即他们理论上本来应该看得见一些信息，比如对方的装备和数值，但为了模拟人类，改成需要付出一定时间成本才能获取)，会怎么样呢？</span><br><span class="line"></span><br><span class="line">不过这个实验太复杂了，短期内应该不会有人做</span><br></pre></td></tr></table></figure>
+
+<p>Q:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">英雄，装备调整后需要从零开始训练么？</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">不大改(英雄重做等级)的话甚至可以直接用原来的参数。当然不精确是肯定的了。</span><br><span class="line"></span><br><span class="line">如果重新train可能要花很多算力，我口嗨一下可能一次要几万块吧</span><br><span class="line"></span><br><span class="line">解决方法是楼上说的类似迁移学习的方法，保持大框架不变，用比较小的成本去针对性的优化改变部分，但这部分属于工程核心细节，具体能不能行、效果如何我就没资格发表意见啦。</span><br><span class="line"></span><br><span class="line">（更新：据可靠消息，不需要完全重新train，有迁移学习方法。）</span><br></pre></td></tr></table></figure>
+
+<p>Q:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">怕就怕腾讯对于“绝悟”的预期并不是真实Ai的预期，而只是战胜人类</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">战胜人类是用反人类超高apm还是实打实的技战术能力，大家都不傻的，腾讯其实没必要自欺欺人，就算之后没下文，也顶多是因为核心技术不能突破了而已</span><br></pre></td></tr></table></figure>
+
+<p>Q:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在不知情的情况下玩胜负影响等级的排位模式无法选择的被AI欺负还要支持？玩家那么逆来顺受？</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">呐 不要这么下定论我就是逆来顺受，我怼起官方来可是半个泥潭都拉不住的</span><br><span class="line"></span><br><span class="line">第一，目前的AI稳定在40星左右，胜率五五开，所以玩家完全被吊打这个说法不成立。当然，从星耀一路上到40星这个过程虐了不少玩家，这个行为我不支持。</span><br><span class="line">第二，我是建议标注让玩家知道自己在打AI</span><br><span class="line">第三，我当然也支持打AI输了不扣分，赢了照加的，这个可以和官方讨价还价</span><br><span class="line">最后，这的确是洗地文，我不收钱自愿洗地——因为作为小半个从业者，我真的很想和AI打。然而最近人在国外，永恒460、上不到40星，很遗憾没有机会。所以如果换做我，我掉分也想和AI过两招。当然，如果AI只是因为没延迟连招快，那我会很失望。。</span><br></pre></td></tr></table></figure>
+
+<p>Q:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">我氰基哥还是一向的好文笔啊！)提前说一声晚安。</span><br><span class="line">有个小问题想请教一下，上文认为AI能够更好的发现游戏平衡性问题，从而帮助策划。</span><br><span class="line">那按照我的理解，这样的帮助可以归纳为两类-“kpl式削弱”&amp;“未卜先知式削弱”(提前发现，盘古这个英雄上线版本是严重超指标的)，这会不会带来普通玩家并无法按照预期展开对新英雄的探索，玩家没有这方面的投入成本，英雄现状更加两极分化(低操高数值/无脑高数值)？</span><br><span class="line">毕竟有kpl式削弱的先例，让某些英雄沦为kpl专属，那会不会加入AI后，这种情况在上新英雄的时候就已经启动了呢？</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. KPL式削弱：坦白讲，这个问题本身有没有AI都会持续存在。就算没有AI、甚至没有KPL，那巅峰2000和铂金局也不一样，所以这个问题“不根属于AI”(换句话说就是没关系)，让策划慢慢头痛去吧</span><br><span class="line">2. 未卜先知式削弱：如果盘古、梦奇、鬼谷子都能够以一个更加健康的强度上线，我觉得也许会更好吧。当然，在刚出来的时候给多一些强度来补偿玩家不熟悉，只要不过分我觉得也可以的，当然这和AI就没关系了</span><br><span class="line">3. AI探索了玩家就不探索：这个我觉得从“本质”和“操作”两部分都不构成太大的问题。由于 AI的操作玩家玩不来、英雄有很多种打法不拘泥于AI 等种种原因，肯定不会导致大家就不探索的；就算不探索，也不会就导致策划只出无脑英雄，这个中间逻辑稍微有点想太多。而最重要的是，就算这些都成立，在操作层面也不是问题——AI不测新英雄，或者测试结果按着不放，只用来给策划平衡强度，可不可以呢~？</span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://ricochet.cn/blog/blog/2019/04/10/A-customer-and-an-American-Apple-customer-service/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ricochet">
+      <meta itemprop="description" content="A personal blog just to please myself.">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricochet's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/2019/04/10/A-customer-and-an-American-Apple-customer-service/" class="post-title-link" itemprop="url">A customer and an American Apple customer service</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-04-10 05:09:38" itemprop="dateCreated datePublished" datetime="2019-04-10T05:09:38-05:00">2019-04-10</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-09-03 17:58:47" itemprop="dateModified" datetime="2019-09-03T17:58:47-05:00">2019-09-03</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>惊闻税率降低，14天内买的苹果产品可以拨打400官方电话退差价</p>
+<p>Google电话号码、拨打转普通话服务，一气呵成</p>
+<p>“对不起，现在电话量过于繁多，请您稍后再尝试” * 5</p>
+<p>我亲你猫 我吃柠檬</p>
+<p>灵光一闪，重拨电话、自信选择English line</p>
+<p>英文线就人性化很多啦： “During the waiting, you can choose to listen beautiful music provided by Apple Music, press 1 for pop, 2 for rock, 3 for jazz, if you prefer to wait in silence, press 4…”</p>
+<p>牛逼，还可以点歌的，就是可惜没有郭德纲相声大全</p>
+<p>那就Jazz吧，感觉自己是全曹西最靓的尼哥</p>
+<p>主歌都没听完就接通了。</p>
+<p>Apple Support (referred as to ‘Apple’): “Apple support, what can I do for you?”<br>Me: “Hello, can you speak Chinese?”<br>Apple: “…”<br>Me: “…”<br>Apple: “Sorry, I am an American and I haven’t yet mastered Chinese.”</p>
+<p><em>[disturbing silence]</em></p>
+<p>Apple: “May I put you through Mandarin line?”<br>Me: “Guess why I’m calling <em>you</em>?”</p>
+<p><em>[disturbing silence]</em></p>
+<p>Me: “Fine, I’ll speak in English anyway. I’m calling to ask for help in tax-drawback for my newly-bought AirPods.”<br>Apple: “Sorry, what?”<br>Me: “I mean, since the tax rate of Chinese has dropped, the newly bought Apple products can enjoy a tax-refund service by 400-hotline-bling.”<br>Apple: “Wow”<br>Me: “Wow”</p>
+<p><em>[disturbing silence]</em></p>
+<p>Apple: “But I’m afraid I can’t retrieve your information through my backend…”<br>Me: “Because they are separate systems?”<br>Apple: “Because they are separate systems.”<br>Me: “Maybe I will try to get through that Mandarin line later.”<br>Apple: <em>[With firm voice]</em> “No, I will handle this for you.”<br>Me: “Wow”<br>Apple: “Wow”<br>Me: “So your plan?”<br>Apple: “You can provide me with your name, e-mail address and phone number.”<br>Me: “And then?”<br>Apple: “I will send an e-mail for you.”<br>Me: “That’s all?”<br>Apple: “That’s all.”</p>
+<p><em>[disturbing silence]</em></p>
+<p>Me: “Fine. My name is Jianing Shi”<br>Apple: “Gianin Chi”<br>Me: “No, it’s J-i-a-n-i-n-g S-h-i”<br>Apple: “Gianin Shi”</p>
+<p><em>[disturbing silence]</em></p>
+<p>Apple: “Sorry but your phone signal is poor.”<br>Me: “Yes, thanks to my latest model of iPhone.”<br>Apple: “That’s pretty understandable.”</p>
+<p><em>[disturbing silence]</em></p>
+<p>Apple: “So, tell me your name again.”<br>Me: … J-i-a-n-i-n-g S-h-i, and my phone number is …<br>Apple: “Got it. I will send an e-mail to you later, and have a nic…”</p>
+<p><em>[phone signal lost]</em></p>
+<p>(完)</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://ricochet.cn/blog/blog/2019/03/28/为什么新版打野刀的改动是一个愚蠢的决定/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ricochet">
+      <meta itemprop="description" content="A personal blog just to please myself.">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricochet's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/2019/03/28/为什么新版打野刀的改动是一个愚蠢的决定/" class="post-title-link" itemprop="url">为什么新版打野刀的改动是一个愚蠢的决定</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-03-28 00:01:40" itemprop="dateCreated datePublished" datetime="2019-03-28T00:01:40-05:00">2019-03-28</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-09-03 18:09:15" itemprop="dateModified" datetime="2019-09-03T18:09:15-05:00">2019-09-03</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>新版打野刀的改动大家也都看到了，只有近战英雄可以享受50%/60%的伤害加成。同一次更新中为了弥补打野效率，把刘备、司马懿的定位改为近战，芈月增加了对小兵伤害。</p>
+<p>我认为这个改动很愚蠢，总结起来就是四个字——得小失大。在NGA攻略作者交流群里，我和几位个人非常尊重的前辈产生了一定的意见分歧。为了避免低效的口舌之争，仅以本帖抛砖引玉，论述一下自己的观点。欢迎一切支持或反对的讨论意见。</p>
+<p>首先，<strong>我的讨论全部基于以下的前提</strong>：策划目前还真的没到山穷水尽、实在无法解决野射的地步，他们其实本可以有别的解决方案。我的所有论述都基于这个前提，如果你可以反驳掉这个前提，那么我放弃文中所有主张。</p>
+<p>为了论证这个前提，<strong>笔者提出另一个解决野射的相抗方案：对于特定野射英雄，进行技能机制上的小修改。</strong>这个替代方案将在下文与策划对打野刀的改动方案进行直接对比。</p>
+<p>举例而言，AOV马可的调整方向就是一个非常好的调整方向。同理的，如果想改其他射手，公孙离改为23技能对野怪无效、大小姐改为1技能强化a只能穿透英雄小兵，而不是粗暴的让所有远程英雄伤害降低30%。</p>
+<p><u>基于这一前提，我从以下三个角度论证我的观点。</u></p>
+<ol>
+<li><p><strong>不遵循“最小改动原则”</strong></p>
+<p>从软件工程的角度来说，对于一个大的项目，为了达到同等的预期效果，能少改就不要多改、能改部件就不要改架构、能微调修复就尽量不重构，这是为了整个系统的稳定性考虑。</p>
+<p>根据这条原则分析现在的情况：走野射路线且策划认为最好打边射的，也就是公马香芳狗，顶多加个守约虞姬，共7位。再考虑到之前策划说过要保留一小部分射手在野区，实际目标英雄还要少于这个数字。那么，为了把这些人赶出野区，我个人认为策划至少需要调整不少于这个数量的英雄(现在已经调了芈刘懿，之后嫦娥婉儿什么的也得调)。更不用说从这个角度来说，这种系统级的调整带来的影响很可能是不可估量的。</p>
+</li>
+<li><p><strong>无端增加反直觉设定</strong><br>MOBA不是现实，就像诸葛亮打死王朗靠的是嘴炮而不是元气弹。这些我都懂，请不要以“在虚拟世界中寻找真实感的都是傻子”来攻击我。</p>
+<p>但是，我认为MOBA中的设定仍然应该遵循<strong>如无必要，勿增实体</strong>的奥卡姆剃刀法则。换言之，在增加任何设定的时候都应该尤其的小心，尤其是当它反直觉的时候。对于MOBA游戏来说，打野刀只有近战才能使用，这显然是一个相当反直觉、且令人摸不到头脑的设定。不要和我说因为是刀所以只有近战才能用。你咋不说射手不能用闪电<em>匕首</em>呢？</p>
+<p>当然，你可能会说，我们现在只是增加了一个全局设定，总比你所有射手一个一个改过去要强吧。然而，首先，<strong>全局设定</strong>的修改是应该最慎之又慎的，它的级别和英雄个体的设定不是一个level。其次，正如上文所说，策划在增加了一条全局设定的同时，又对N多想保留的远程打野(如备懿芈)新增了设定，增加的设定总数甚至都会超过单独改动野射。</p>
+</li>
+<li><p><strong>由于不够有针对性，扼杀了更多创新的可能性</strong><br>如果说前两条还只是可以商榷甚至忽略的小影响，那么这一条是我认为新版打野刀改动非常愚蠢的<strong>核心原因</strong>。这个论点基于我一直非常赞同三个观点：</p>
+<ol>
+<li>策划的职能仅限于推荐玩家怎么玩游戏，但<strong>绝不应该强制管教玩家如何玩游戏</strong></li>
+<li>在不伤及平衡的情况下，<strong>玩法应该越多越好，百花齐放好于千人一面</strong></li>
+<li>夺目亮眼的<strong>套路往往是玩家自己摸索出来的</strong>。</li>
+</ol>
+<p>其中，12是价值性的倡导，没有论据，大家可以凭借自己的感知自行判断；3的论据包括献祭流雅典娜、辅助兰陵王、AD梦奇甚至养猪流等都是玩家自己发明的。官方也说过鼓励玩家开创新的玩法。</p>
+<p>这里也是一样的道理，玩家的能选择的玩法应该是越多越好的，为了几个野射，把打野的空间直接砍掉了一半。没错是可以再改几个英雄，可是更多的法术打野可能性呢？直接消失了。当然你可以说那策划可以每当出一个可以打野的法术英雄，都给加个被动。可是问题就在于3，新版打野刀的改动相当于<strong>把(一部分)新玩法的探索权利完全让渡给了策划，但很多时候套路都是玩家自己摸索出来的</strong>。玩家的选择变少了，那么潜在的有趣的玩法也就变少了。</p>
+<p>说到这里，大家可能会想问我，不科学的机制就是要修改啊，难道你也支持养猪流吗？当然不，这并不是我的意思。我的意思是，如果某种套路明显有悖于游戏体验，可以约束，但是这种约束<strong>一定是要以最小的代价、最强的针对性</strong>实现的。比如说，假设养猪要削，可以削学识宝石，大家都喜闻乐见，但是如果你改成[当出现超过3个辅助定位的英雄时候直接强制重开]或者[出现三个辅助就不能再选射手]或者[当射手是唯一输出的时候，降低他50%输出]，这明显就愚蠢了。仔细想想，为什么大家会觉得后者愚蠢呢呢？就是因为不够有针对性，很容易误伤无辜。</p>
+</li>
+</ol>
+<p>综上所述，我认为新版打野刀的改动非常愚蠢。欢迎在回复中交流讨论你的观点。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+  </div>
+
+  
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Ricochet</p>
+  <div class="site-description" itemprop="description">A personal blog just to please myself.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span>
+        
+      </div>
+    
+  </nav>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ricochet</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/blog/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/blog/js/utils.js?v=7.4.0"></script><script src="/blog/js/motion.js?v=7.4.0"></script>
+<script src="/blog/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/blog/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="前言如果不了解天美工作室在王者荣耀高星五排局中加入AI的事件，请移步暴走的老刘备的帖子 这是一篇很长的文章（2500字），但大多数都是有趣的故事，枯燥的说理占比很小。希望你能看得开心。 利益相关 休闲路人玩家，最高水平巅峰赛1700 AI领域见习研究者，主攻方向NLP/RL 围棋业余4段棋手，某211大学校围棋队划水成员  个人态度 从游戏的角度：   我支持在在让玩家知情的情况下在高段位五排中加">
+<meta name="keywords" content="Game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从围棋到MOBA，从AI到未来：为什么绝悟AI是王者荣耀的闪耀明天">
+<meta property="og:url" content="http://ricochet.cn/blog/2019/08/23/从围棋到MOBA，从AI到未来：为什么绝悟AI是王者荣耀的闪耀明天/index.html">
+<meta property="og:site_name" content="Ricochet&#39;s Blog">
+<meta property="og:description" content="前言如果不了解天美工作室在王者荣耀高星五排局中加入AI的事件，请移步暴走的老刘备的帖子 这是一篇很长的文章（2500字），但大多数都是有趣的故事，枯燥的说理占比很小。希望你能看得开心。 利益相关 休闲路人玩家，最高水平巅峰赛1700 AI领域见习研究者，主攻方向NLP/RL 围棋业余4段棋手，某211大学校围棋队划水成员  个人态度 从游戏的角度：   我支持在在让玩家知情的情况下在高段位五排中加">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-03T22:51:24.413Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从围棋到MOBA，从AI到未来：为什么绝悟AI是王者荣耀的闪耀明天">
+<meta name="twitter:description" content="前言如果不了解天美工作室在王者荣耀高星五排局中加入AI的事件，请移步暴走的老刘备的帖子 这是一篇很长的文章（2500字），但大多数都是有趣的故事，枯燥的说理占比很小。希望你能看得开心。 利益相关 休闲路人玩家，最高水平巅峰赛1700 AI领域见习研究者，主攻方向NLP/RL 围棋业余4段棋手，某211大学校围棋队划水成员  个人态度 从游戏的角度：   我支持在在让玩家知情的情况下在高段位五排中加">
+  <link rel="canonical" href="http://ricochet.cn/blog/2019/08/23/从围棋到MOBA，从AI到未来：为什么绝悟AI是王者荣耀的闪耀明天/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>从围棋到MOBA，从AI到未来：为什么绝悟AI是王者荣耀的闪耀明天 | Ricochet's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ricochet's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://ricochet.cn/blog/blog/2019/08/23/从围棋到MOBA，从AI到未来：为什么绝悟AI是王者荣耀的闪耀明天/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ricochet">
+      <meta itemprop="description" content="A personal blog just to please myself.">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricochet's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">从围棋到MOBA，从AI到未来：为什么绝悟AI是王者荣耀的闪耀明天
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-08-23 00:21:00" itemprop="dateCreated datePublished" datetime="2019-08-23T00:21:00-05:00">2019-08-23</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-09-03 17:51:24" itemprop="dateModified" datetime="2019-09-03T17:51:24-05:00">2019-09-03</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果不了解天美工作室在王者荣耀<strong><u>高星五排</u></strong>局中加入AI的事件，请移步<a href="https://ngabbs.com/read.php?tid=18260287&_ff=516" target="_blank" rel="noopener">暴走的老刘备的帖子</a></p>
+<p>这是一篇很长的文章（2500字），但大多数都是有趣的故事，枯燥的说理占比很小。希望你能看得开心。</p>
+<h2 id="利益相关"><a href="#利益相关" class="headerlink" title="利益相关"></a>利益相关</h2><ul>
+<li>休闲路人玩家，最高水平巅峰赛1700</li>
+<li>AI领域见习研究者，主攻方向NLP/RL</li>
+<li>围棋业余4段棋手，某211大学校围棋队划水成员</li>
+</ul>
+<h2 id="个人态度"><a href="#个人态度" class="headerlink" title="个人态度"></a>个人态度</h2><ol>
+<li>从游戏的角度：</li>
+</ol>
+<ul>
+<li>我<u><strong>支持</strong></u>在在让玩家<u><strong>知情</strong></u>的情况下在<strong><u>高段位五排</u></strong>中加入AI（即玩家在载入对局时就知道对面是AI）</li>
+<li>我<strong><u>建议</u></strong>开放<strong><u>满战力</u></strong>的AI给<strong><u>高段位五排队伍</u></strong>挑战</li>
+</ul>
+<ol start="2">
+<li>从AI模型的角度</li>
+</ol>
+<ul>
+<li>我<strong><u>建议</u></strong>人为给AI<strong><u>增加延迟</u></strong>、<strong><u>降低操作间隔</u></strong></li>
+</ul>
+<h2 id="目前的AI到底是什么"><a href="#目前的AI到底是什么" class="headerlink" title="目前的AI到底是什么"></a>目前的AI到底是什么</h2><p>如果没有猜错的话，目前天美投放的AI就是腾讯最新研究的<strong>绝悟</strong>AI。关于该AI的报道可参见<a href="https://tech.qq.com/a/20190803/002062.htm" target="_blank" rel="noopener">这里</a>。</p>
+<ol>
+<li>作为AI从业者，我认为该AI的亮点在于</li>
+</ol>
+<ul>
+<li>使用了白板学习，即<strong>不依赖于任何人类已知经验</strong>（如观看人类录像、人为设定连招等），完全做到<strong>从零学起</strong>。</li>
+<li>有较高的把握认为，<strong>该AI没有全图视野</strong>。（腾讯并没有明确表态是否有全局视野，但在推文中使用了“不完全信息博弈”的说法，如果文案没有错误，则就是没有全局视野的意思）</li>
+</ul>
+<ol start="2">
+<li>该AI的问题在于</li>
+</ol>
+<ul>
+<li>拥有超过人类极限的操作精度和网络延迟，这从AI的抽搐移动可以看出。（这也是几乎所有MOBA类AI的通病）</li>
+</ul>
+<p>我们一方面要肯定该AI使用白板学习且去掉全图视野后的优异水平，另一方面也要认识到，输了也不完全怪咱们自己。</p>
+<p>从公平的角度，我是<strong>希望给AI加上20ms的网络延迟</strong>（这个很容易模拟），<strong>同时加上操作之间的cd</strong>，控制一下apm，避免真-无懈可击的连招打的人没脾气。</p>
+<h2 id="那为什么还要支持加入AI呢？"><a href="#那为什么还要支持加入AI呢？" class="headerlink" title="那为什么还要支持加入AI呢？"></a>那为什么还要支持加入AI呢？</h2><p>原因很简单，因为我是一名下围棋超过15年的围棋爱好者，充分见证了AI对围棋行业天翻地覆的改变，AI可以说将所有围棋运动员的水平提升了远远不止一个档次。而<strong>我认为这种脱胎换骨的提升同样适用于MOBA</strong>。</p>
+<p>先给大家讲一个围棋的故事，希望大家能耐心看完。</p>
+<p>在我小学学棋时，“开局星位点三三”和“星位小飞挂角尖顶”这两种招式都属于<strong>围棋界一致认为血亏</strong>的下法，属于下出来就要被老师打手板的那种。</p>
+<p>但是，AlphaGo横空出世后，大家惊讶的发现居然AlphaGo的自对局棋谱里每局都这么下！</p>
+<p>职业棋手都懵逼了，<strong>我们下了一百年的围棋怎么就被AI否定了？</strong>但是呢，硬打又打不过，就纷纷买了高性能主机，和AI一起拆解研究。</p>
+<p>大概花了半年的时间才搞懂，<strong>原来一百年来，人类都看漏了一步</strong>，之前人类认为血亏的下法的确是血亏，但是只要多走一步棋，从“爬两下”变成“爬三下”，一下就从血亏变成了稍赚。<strong>而就这一步之隔，一百年间顶尖智慧的围棋选手竟无人发现。就算隐隐约约有些感觉，他也不敢这么下，因为怕被围棋界耻笑</strong>。</p>
+<p><strong>这样的例子有上百个之多</strong>。<strong>而且，不喂人类棋谱、完全白板训练出的AlphaGo Zero更是完全脱离了人类局限认知的束缚，提供了更多超乎想象但极为合理的新思想</strong>。现在，如果哪个职业选手不买个电脑和AI一起研究，就会瞬间跌出围棋顶尖高手的行列。人类对围棋的理念被AI重新塑造，实力更是提升了几个大台阶。虽然人类还是打不过最顶尖的AI，但已经超越了虐杀李世石的初代AlphaGo，也经常能发现绝艺等顶尖AI都看不到的妙手。<del>（然并卵，还是打不过</del></p>
+<p>我花了这么长的篇幅讲围棋并不是废话，其实里边已经暗含了<strong>我认为绝悟AI能给MOBA带来的三大利好</strong>。</p>
+<ol>
+<li><strong><u>想前人未曾想，提供游戏思路</u></strong>。众所周知MOBA的游戏套路很多、且版本变化很快。从这种角度来说，MOBA的套路比一百年不改规则的围棋更难发现。而在绝悟的对局中，就真的出现过<strong>双C中路吃第一波线然后转边路</strong>的操作，如果这样是最后证明是正确的，那么AI的出现无疑能极大地<strong>拓展游戏的思路</strong></li>
+<li><strong><u>做前人未敢做，重新审视一切</u></strong>。在”前AI时代“，不是没有国手下过开局点三三，但他们一方面怕别人指指点点，一方面又不敢肯定自己这么下对不对，只好偃旗息鼓，按照大家的共识来下。<strong>而对应MOBA，”C位不能被蹭线“，”裸三级辅助装一定都是SB“，”没有单带边路就容易被运营死“等等，这些约定俗成的规律又何尝不可以被挑战呢？</strong>当然你可能会说，“裸三级辅助装一定是有问题的，不接受反驳”。的确，有可能在现在的情况下就是血亏，但是，<strong>又怎么保证我们没有漏掉之后“再爬一步”的妙手呢？</strong></li>
+<li><strong><u>提升认知边际，全民提升水平</u></strong>。归根结底，AI最终极的目的就是让我们更强。菜鸡互啄是五五开，神仙打架也是五五开，<strong>谁不想看后者呢？</strong>能够从AI取经、提升游戏水平，这也是我自己作为一个自认的硬核游戏玩家最快乐的事情。</li>
+</ol>
+<p>这部分的最后解答一个疑虑，<strong>会不会在AI出现后，发现游戏只有一种最佳玩法，导致游戏性反而下降了呢？</strong>比如如果AI最后收敛到了所有人一起带线避战，一局打50分钟，这不是反而更差了吗？</p>
+<p><strong>这种疑虑是有道理的，但我们可以暂时不必担心</strong>。</p>
+<p>首先，按照围棋的经验，在没有AI时代，国手们有很多种棋风，比如实空流、宇宙流、均衡流等。但AI出现后，大家发现最好的行棋风格就是没有风格。</p>
+<p>同理，我们也许可以推测，对于MOBA来说，<strong>最好的策略就是没有策略。</strong>这里的没有策略当然指的不是乱打一气，而是<strong>掌握各种风格，不偏激不上头，在合适的时候用合适的打法</strong>。当然，人类可能要花很长时间才能学会。</p>
+<p>其次，AI其实可以帮我们<strong>更好地发现游戏平衡性的问题</strong>，这也能够帮助策划<strong>更好的调整版本强度</strong>。<del>策划还是很努力地，给他们点信心吧</del></p>
+<h2 id="如果TIMI看到了这篇文章"><a href="#如果TIMI看到了这篇文章" class="headerlink" title="如果TIMI看到了这篇文章"></a>如果TIMI看到了这篇文章</h2><p>我希望TIMI顶住舆论的压力，继续测试。不要因为流言蜚语而畏首不前、自我放弃。</p>
+<p>同时，<strong>我希望能够让玩家知道自己正在面对AI</strong>。AI不丢人，可以大大方方告诉大家。这样一方面是保证了玩家的知情权，另一方面也可以让玩家有意识的观察AI的行动策略，看看是否能有学习的空间。</p>
+<p>最后，我也希望能够向KPL职业战队和高端路人玩家（比如巅峰赛前1000名）<strong>开放组队形式的AI挑战</strong>。如果优秀的AI战术能够从KPL推广出来，那么就可以自顶之下的普及给每一个热爱游戏的玩家。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>今天看到一个帖子，大概意思是自己虽然很菜，但是决不允许天美拿高端顶尖玩家进行测试，说这是一种侮辱。虽然我自己不能算是顶尖玩家，不过我看了之后还是有点哑然失笑。所以在文章的最后，就给大家讲个故事吧。</p>
+<p>在2017年末，一个名为”符合预期“的神秘账号，在腾讯围棋平台上大杀四方。面对最顶尖的人类棋手，它轻松连赢10盘。<strong>这时，大家就已经心知肚明这是哪个大科技公司的AI马甲了，想继续挑战也就是送死。</strong></p>
+<p>但是，围棋世界冠军们没有顾虑自己尊严受损而退缩，反而一个接一个的排队挑战。最后，“符合预期”对人类顶尖高手取得了60连胜。其中绝大多数是“很没有尊严”的屠杀局。</p>
+<p>之后，“符合预期”揭下了面纱，将ID改为了自己真正的名字，腾讯自研围棋AI、“绝悟”的哥哥——<strong>“绝艺“</strong>。</p>
+<p>希望这个故事让大家知道：<strong>输给AI不丢人，在游戏的路上， 你的对手只有你自己</strong>。</p>
+<h3 id="Q-amp-As"><a href="#Q-amp-As" class="headerlink" title="Q&amp;As"></a>Q&amp;As</h3><p>Q:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">openai five后来不做了，这是一个Dota2的ai，团队ai，一是每次更新版本，都要再训练一遍，也就是迁移学习做不好，很费精力和财力，公开人类挑战百分之99胜率，已经可以继续圈钱了，二是整体复杂度还是太高，直到最后也没全部开放所有限制，而且打法很单一，后来有人类选手发现可以比较好方式的赢下了。</span><br><span class="line">rng去年放出绝悟和对应论文，上面写了用的openai的框架，做了些修改，至于今年改没改，不太清楚，今年论文没找到翻译。</span><br><span class="line">其实这个moba的模型并没有达到完美，也很难，但是操作上人类确实很难超过ai，无论怎么限制，ai的操作就是比人强，再很大程度上人确实没办法抗衡。</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">优秀回复，说的特别好</span><br><span class="line"></span><br><span class="line">我补充几个点：</span><br><span class="line">1. 今年更新了，我也很期待最新的论文公布</span><br><span class="line">2. 每个大赛季版本重新训练对于腾讯来说是完全可以支付的，但是迁移学习的确是一个难点，你说的非常对</span><br><span class="line">3. MOBA离完美还有很远很远，但是我相信千里之行始于足下嘛。我高中时候还在嘲笑当时的围棋ai一坨xx，结果没过两年就被教育的说不出话了</span><br><span class="line">4. 操作我强烈建议拉平，不然ai得不到足够的挑战，可能会沉溺于局部最优</span><br></pre></td></tr></table></figure>
+
+<p>Q:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">希望是五个ai操作五个角色，互相之间共享有限的情报，而不是一个ai协调五个角色</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这是一个AI哲学问题。如果5个模型都是同一个参数，即使他们不沟通，他们该算是1个模型还是5个模型？其实很难讲，因为权重都一样，运行在1台机器和5台机器能一样吗？</span><br><span class="line"></span><br><span class="line">不过你说的有一点很有启发性：如果给AI人为的mask(删除)一些信息(即他们理论上本来应该看得见一些信息，比如对方的装备和数值，但为了模拟人类，改成需要付出一定时间成本才能获取)，会怎么样呢？</span><br><span class="line"></span><br><span class="line">不过这个实验太复杂了，短期内应该不会有人做</span><br></pre></td></tr></table></figure>
+
+<p>Q:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">英雄，装备调整后需要从零开始训练么？</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">不大改(英雄重做等级)的话甚至可以直接用原来的参数。当然不精确是肯定的了。</span><br><span class="line"></span><br><span class="line">如果重新train可能要花很多算力，我口嗨一下可能一次要几万块吧</span><br><span class="line"></span><br><span class="line">解决方法是楼上说的类似迁移学习的方法，保持大框架不变，用比较小的成本去针对性的优化改变部分，但这部分属于工程核心细节，具体能不能行、效果如何我就没资格发表意见啦。</span><br><span class="line"></span><br><span class="line">（更新：据可靠消息，不需要完全重新train，有迁移学习方法。）</span><br></pre></td></tr></table></figure>
+
+<p>Q:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">怕就怕腾讯对于“绝悟”的预期并不是真实Ai的预期，而只是战胜人类</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">战胜人类是用反人类超高apm还是实打实的技战术能力，大家都不傻的，腾讯其实没必要自欺欺人，就算之后没下文，也顶多是因为核心技术不能突破了而已</span><br></pre></td></tr></table></figure>
+
+<p>Q:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在不知情的情况下玩胜负影响等级的排位模式无法选择的被AI欺负还要支持？玩家那么逆来顺受？</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">呐 不要这么下定论我就是逆来顺受，我怼起官方来可是半个泥潭都拉不住的</span><br><span class="line"></span><br><span class="line">第一，目前的AI稳定在40星左右，胜率五五开，所以玩家完全被吊打这个说法不成立。当然，从星耀一路上到40星这个过程虐了不少玩家，这个行为我不支持。</span><br><span class="line">第二，我是建议标注让玩家知道自己在打AI</span><br><span class="line">第三，我当然也支持打AI输了不扣分，赢了照加的，这个可以和官方讨价还价</span><br><span class="line">最后，这的确是洗地文，我不收钱自愿洗地——因为作为小半个从业者，我真的很想和AI打。然而最近人在国外，永恒460、上不到40星，很遗憾没有机会。所以如果换做我，我掉分也想和AI过两招。当然，如果AI只是因为没延迟连招快，那我会很失望。。</span><br></pre></td></tr></table></figure>
+
+<p>Q:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">我氰基哥还是一向的好文笔啊！)提前说一声晚安。</span><br><span class="line">有个小问题想请教一下，上文认为AI能够更好的发现游戏平衡性问题，从而帮助策划。</span><br><span class="line">那按照我的理解，这样的帮助可以归纳为两类-“kpl式削弱”&amp;“未卜先知式削弱”(提前发现，盘古这个英雄上线版本是严重超指标的)，这会不会带来普通玩家并无法按照预期展开对新英雄的探索，玩家没有这方面的投入成本，英雄现状更加两极分化(低操高数值/无脑高数值)？</span><br><span class="line">毕竟有kpl式削弱的先例，让某些英雄沦为kpl专属，那会不会加入AI后，这种情况在上新英雄的时候就已经启动了呢？</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. KPL式削弱：坦白讲，这个问题本身有没有AI都会持续存在。就算没有AI、甚至没有KPL，那巅峰2000和铂金局也不一样，所以这个问题“不根属于AI”(换句话说就是没关系)，让策划慢慢头痛去吧</span><br><span class="line">2. 未卜先知式削弱：如果盘古、梦奇、鬼谷子都能够以一个更加健康的强度上线，我觉得也许会更好吧。当然，在刚出来的时候给多一些强度来补偿玩家不熟悉，只要不过分我觉得也可以的，当然这和AI就没关系了</span><br><span class="line">3. AI探索了玩家就不探索：这个我觉得从“本质”和“操作”两部分都不构成太大的问题。由于 AI的操作玩家玩不来、英雄有很多种打法不拘泥于AI 等种种原因，肯定不会导致大家就不探索的；就算不探索，也不会就导致策划只出无脑英雄，这个中间逻辑稍微有点想太多。而最重要的是，就算这些都成立，在操作层面也不是问题——AI不测新英雄，或者测试结果按着不放，只用来给策划平衡强度，可不可以呢~？</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/blog/tags/Game/" rel="tag"># Game</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/blog/2019/04/10/A-customer-and-an-American-Apple-customer-service/" rel="next" title="A customer and an American Apple customer service">
+                  <i class="fa fa-chevron-left"></i> A customer and an American Apple customer service
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/blog/2019/09/13/今晚，NGA又过节了/" rel="prev" title="今晚，NGA又过节了...">
+                  今晚，NGA又过节了... <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利益相关"><span class="nav-number">2.</span> <span class="nav-text">利益相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#个人态度"><span class="nav-number">3.</span> <span class="nav-text">个人态度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目前的AI到底是什么"><span class="nav-number">4.</span> <span class="nav-text">目前的AI到底是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#那为什么还要支持加入AI呢？"><span class="nav-number">5.</span> <span class="nav-text">那为什么还要支持加入AI呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果TIMI看到了这篇文章"><span class="nav-number">6.</span> <span class="nav-text">如果TIMI看到了这篇文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">7.</span> <span class="nav-text">结语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Q-amp-As"><span class="nav-number">7.1.</span> <span class="nav-text">Q&amp;As</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Ricochet</p>
+  <div class="site-description" itemprop="description">A personal blog just to please myself.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span>
+        
+      </div>
+    
+  </nav>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ricochet</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/blog/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/blog/js/utils.js?v=7.4.0"></script><script src="/blog/js/motion.js?v=7.4.0"></script>
+<script src="/blog/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/blog/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
